@@ -18,9 +18,9 @@ import com.gestoracademico.usuarios.config.security.jwt.JwtAuthFilter;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
-		
-	@Bean
-	public SecurityFilterChain securityFilterChan(HttpSecurity http, JwtAuthFilter jwtAuthFilter) throws Exception{
+
+    @Bean
+    SecurityFilterChain securityFilterChan(HttpSecurity http, JwtAuthFilter jwtAuthFilter) throws Exception{
 		http
 		.cors(Customizer.withDefaults())
         .exceptionHandling(exception -> exception.accessDeniedPage("/Acceso_Denegado"))
